@@ -1,0 +1,66 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.pdb
+*.log
+
+# Ambiente virtual
+venv/
+env/
+.venv/
+env.bak/
+
+# Dependências
+*.egg
+*.egg-info/
+dist/
+build/
+*.tar.gz
+*.whl
+
+# PyInstaller
+#  Impede que arquivos gerados pelo PyInstaller sejam rastreados.
+#  Em projetos que não utilizam PyInstaller, esses diretórios podem ser ignorados.
+*.spec
+
+# FastAPI
+# Arquivos temporários ou de cache criados pelo FastAPI durante o desenvolvimento
+*.db
+*.sqlite3
+
+# Arquivos de configuração de IDEs
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Jupyter Notebooks checkpoints
+.ipynb_checkpoints/
+
+# Arquivos de logs
+*.log
+
+# Arquivos de testes
+nosetests.xml
+coverage.xml
+*.cover
+*.hypothesis/
+*.tox/
+
+# Arquivos de configuração de ferramentas de CI/CD (se usar)
+*.env
+*.dockerignore
+docker-compose.override.yml
+
+# Arquivos do sistema
+.DS_Store   # Para MacOS
+Thumbs.db   # Para Windows
+
+# Arquivos do banco de dados SQLite
+*.sqlite3
+
+# Arquivos gerados por ferramentas de análise de código
+.mypy_cache/
+.pyre/
