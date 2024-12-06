@@ -7,6 +7,7 @@ import { VagasTotal } from '../models/vagas-total';
 import { VagasHash256 } from '../models/vagas-hash-256';
 import { VagaCreateRequest } from '../models/vaga-create-request';
 import { Filters } from '../models/filters';
+import { environment } from '../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +16,7 @@ export class VagasService {
 
   constructor(private _httpClient: HttpClient) {}
   
-  href = 'http://localhost:5000';
+  href = environment.apiUrl;
 
   list(filters: Filters): Observable<Vaga[]> {
 
