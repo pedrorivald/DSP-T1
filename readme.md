@@ -12,10 +12,20 @@ pip install fastapi
 pip install uvicorn
 pip install python-ulid
 
+# Acessar na nuvem
+frontend: https://dsp-t1.vercel.app/
+api: https://dsp-t1-latest.onrender.com/docs
+
 # API
 ### Executar localmente
+`cd api`
 `pip install --no-cache-dir -r requirements.txt`
-uvicorn main:app --reload --port 5000
+`uvicorn main:app --reload --port 8000`
+
+### Docker API
+`cd api`
+`docker build -t dsp-t1 .`
+`docker run -d -p 8000:8000 dsp-t1`
 
 # Frontend
 ### Executar localmente
@@ -23,14 +33,6 @@ uvicorn main:app --reload --port 5000
 `cd frontend`
 `npm install`
 `npm run start:dev`
-`npm run start:prod`
-`npm run build:dev`
-`npm run build:prod`
-
-### Docker API
-`cd api`
-`docker build -t dsp-t1 .`
-`docker run -d -p 8000:8000 dsp-t1`
 
 ### Docker Frontend
 `cd frontend`
