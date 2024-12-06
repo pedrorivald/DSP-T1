@@ -1,0 +1,33 @@
+<h2 mat-dialog-title>Cadastrar Nova Vaga</h2>
+<mat-dialog-content>
+    <mat-form-field style="width: 100%">
+        <mat-label>Tipo</mat-label>
+        <input matInput [(ngModel)]="data.tipo">
+    </mat-form-field>
+
+    <mat-form-field style="width: 100%">
+        <mat-label>Categoria</mat-label>
+        <input matInput [(ngModel)]="data.categoria">
+    </mat-form-field>
+
+    <mat-form-field style="width: 100%">
+        <mat-label>Empresa</mat-label>
+        <input matInput [(ngModel)]="data.empresa">
+    </mat-form-field>
+
+    <mat-form-field style="width: 100%"> 
+        <mat-label>Status</mat-label>
+        <input matInput [(ngModel)]="data.status">
+    </mat-form-field>
+
+    <mat-form-field style="width: 100%">
+        <mat-label>Descrição</mat-label>
+        <textarea matInput [(ngModel)]="data.descricao"></textarea>
+    </mat-form-field>
+    
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <button mat-button (click)="onCancelClick()">Desistir</button>
+    <button mat-button [mat-dialog-close]="form()" cdkFocusInitial>Salvar</button>
+</mat-dialog-actions>

@@ -1,43 +1,109 @@
 .vagas-container {
-    position: relative;
-  }
-  
-  .vagas-table-container {
-    position: relative;
-    min-height: 200px;
-    max-height: 400px;
-    overflow: auto;
-  }
-  
-  table {
-    width: 100%;
-  }
-  
-  .vagas-loading-shade {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 56px;
-    right: 0;
-    background: rgba(0, 0, 0, 0.15);
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .vagas-rate-limit-reached {
-    max-width: 360px;
-    text-align: center;
-  }
-  
-  /* Column Widths */
-  .mat-column-number,
-  .mat-column-state {
-    width: 64px;
-  }
-  
-  .mat-column-created {
-    width: 124px;
-  }
-  
+  position: relative;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.vagas-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.vagas-filters {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.vagas-table-container {
+  position: relative;
+  min-height: 200px;
+  max-height: 800px;
+  border-radius: 12px;
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+}
+
+.vagas-loading-shade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 56px;
+  right: 0;
+  background: rgba(0, 0, 0, 0.15);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mat-column-number,
+.mat-column-state {
+  width: 64px;
+}
+
+.mat-column-created {
+  width: 124px;
+}
+
+
+table {
+  width: 100%;
+}
+
+tr.detail-row {
+  height: 0;
+}
+
+tr.element-row:not(.expanded-row):hover {
+  background: whitesmoke;
+}
+
+tr.element-row:not(.expanded-row):active {
+  background: #efefef;
+}
+
+.element-row td {
+  border-bottom-width: 0;
+}
+
+.element-detail {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.element-detail-actions {
+  width: 100%;
+  display: flex;
+  gap: 8px;
+}
+
+.element-diagram {
+  min-width: 80px;
+  border: 2px solid black;
+  padding: 8px;
+  font-weight: lighter;
+  margin: 8px 0;
+  height: 104px;
+}
+
+.element-symbol {
+  font-weight: bold;
+  font-size: 40px;
+  line-height: normal;
+}
+
+.element-description {
+  padding: 16px;
+}
+
+.element-description-attribution {
+  opacity: 0.5;
+}
