@@ -2,12 +2,23 @@
 <mat-dialog-content>
     <mat-form-field style="width: 100%">
         <mat-label>Tipo</mat-label>
-        <input matInput [(ngModel)]="data.tipo">
+        <mat-select [(value)]="data.tipo">
+            <mat-option value="remota">Remota</mat-option>
+            <mat-option value="presencial">Presencial</mat-option>
+            <mat-option value="hibrida">Híbrida</mat-option>
+        </mat-select>
     </mat-form-field>
 
     <mat-form-field style="width: 100%">
         <mat-label>Categoria</mat-label>
-        <input matInput [(ngModel)]="data.categoria">
+        <mat-select [(value)]="data.categoria">
+            <mat-option value="backend">Backend</mat-option>
+            <mat-option value="frontend">Frontend</mat-option>
+            <mat-option value="fullstack">Fullstack</mat-option>
+            <mat-option value="qa">QA</mat-option>
+            <mat-option value="devops">Devops</mat-option>
+            <mat-option value="mobile">Mobile</mat-option>
+        </mat-select>
     </mat-form-field>
 
     <mat-form-field style="width: 100%">
@@ -17,7 +28,10 @@
 
     <mat-form-field style="width: 100%"> 
         <mat-label>Status</mat-label>
-        <input matInput [(ngModel)]="data.status">
+        <mat-select [(value)]="data.status">
+            <mat-option value="ativa">Ativa</mat-option>
+            <mat-option value="inativa">Inativa</mat-option>
+        </mat-select>
     </mat-form-field>
 
     <mat-form-field style="width: 100%">

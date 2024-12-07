@@ -6,7 +6,7 @@ class Vaga(BaseModel):
     id: Optional[str] = Field(None, description="ID gerado automaticamente pelo sistema")
     descricao: str = Field(
         ..., 
-        min_length=10, 
+        min_length=1, 
         max_length=1000, 
         description="Descrição detalhada da vaga (entre 10 e 1024 caracteres)"
     )

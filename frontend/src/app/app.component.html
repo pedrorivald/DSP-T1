@@ -25,17 +25,34 @@
   <div class="vagas-filters">
     <mat-form-field style="width: 200px">
       <mat-label>Tipo</mat-label>
-      <input matInput [(ngModel)]="filters.tipo">
+      <mat-select [(value)]="filters.tipo">
+        <mat-option>Todos</mat-option>
+        <mat-option value="remota">Remota</mat-option>
+        <mat-option value="presencial">Presencial</mat-option>
+        <mat-option value="hibrida">Híbrida</mat-option>
+    </mat-select>
     </mat-form-field>
 
     <mat-form-field style="width: 200px">
       <mat-label>Categoria</mat-label>
-      <input matInput [(ngModel)]="filters.categoria">
+      <mat-select [(value)]="filters.categoria">
+        <mat-option>Todas</mat-option>
+        <mat-option value="backend">Backend</mat-option>
+        <mat-option value="frontend">Frontend</mat-option>
+        <mat-option value="fullstack">Fullstack</mat-option>
+        <mat-option value="qa">QA</mat-option>
+        <mat-option value="devops">Devops</mat-option>
+        <mat-option value="mobile">Mobile</mat-option>
+    </mat-select>
     </mat-form-field>
 
     <mat-form-field style="width: 200px">
       <mat-label>Status</mat-label>
-      <input matInput [(ngModel)]="filters.status">
+      <mat-select [(value)]="filters.status">
+        <mat-option>Todos</mat-option>
+        <mat-option value="ativa">Ativa</mat-option>
+        <mat-option value="inativa">Inativa</mat-option>
+    </mat-select>
     </mat-form-field>
 
     <button mat-flat-button (click)="list()">

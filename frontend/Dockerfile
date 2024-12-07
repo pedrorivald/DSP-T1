@@ -1,12 +1,14 @@
 FROM node:22 as build
 
+ARG BUILD_ENV=prod
+
 WORKDIR /app
 
 COPY package*.json ./
 RUN npm install
 COPY . .
 
-RUN npm run build:prod
+RUN npm run build:$BUILD_ENV
 
 FROM nginx:stable-alpine
 

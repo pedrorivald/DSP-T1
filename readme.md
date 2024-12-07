@@ -7,11 +7,6 @@ tipo         | string (remota, hibrida ou presencial)
 empresa      | string
 data_criacao | datetime
 
-# Dependencias
-pip install fastapi
-pip install uvicorn
-pip install python-ulid
-
 # Acessar na nuvem
 frontend: https://dsp-t1.vercel.app/
 api: https://dsp-t1-latest.onrender.com/docs
@@ -25,7 +20,8 @@ api: https://dsp-t1-latest.onrender.com/docs
 ### Docker API
 `cd api`
 `docker build -t dsp-t1 .`
-`docker run -d -p 8000:8000 dsp-t1`
+Rodar `docker run -d -p 8000:8000 dsp-t1`
+Acessar em http://localhost:8000
 
 # Frontend
 ### Executar localmente
@@ -36,5 +32,7 @@ api: https://dsp-t1-latest.onrender.com/docs
 
 ### Docker Frontend
 `cd frontend`
-`docker build -t dsp-t1-frontend .`
-`docker run -d -p 8001:8001 dsp-t1-frontend`
+Para usar a API local: `docker build --build-arg BUILD_ENV=dev -t dsp-t1-frontend .`
+Para usar a API hospedada: `docker build --build-arg BUILD_ENV=prod -t dsp-t1-frontend .`
+Rodar `docker run -d -p 8001:8001 dsp-t1-frontend`
+Acessar em http://localhost:8001

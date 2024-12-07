@@ -22,6 +22,7 @@ import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { MAT_DIALOG_DATA, MatDialog, MatDialogActions, MatDialogClose, MatDialogContent, MatDialogRef, MatDialogTitle } from '@angular/material/dialog';
 import { Filters } from '../models/filters';
+import { MatSelectModule } from '@angular/material/select';
 
 registerLocaleData(localePt);
 
@@ -30,6 +31,7 @@ registerLocaleData(localePt);
   imports: [
     MatProgressSpinnerModule, 
     MatTableModule, 
+    MatSelectModule,
     MatSortModule, 
     MatPaginatorModule, 
     DatePipe, 
@@ -212,6 +214,7 @@ export class AppComponent implements OnInit {
     MatInputModule,
     FormsModule,
     MatButtonModule,
+    MatSelectModule,
     MatDialogTitle,
     MatDialogContent,
     MatDialogActions,
@@ -237,6 +240,7 @@ export class DialogVagasEdit {
   imports: [
     MatFormFieldModule,
     MatInputModule,
+    MatSelectModule,
     FormsModule,
     MatButtonModule,
     MatDialogTitle,
@@ -266,6 +270,7 @@ export class DialogVagasCreate {
     MatInputModule,
     FormsModule,
     MatButtonModule,
+    MatSelectModule,
     MatDialogTitle,
     MatDialogContent,
     MatDialogActions,
