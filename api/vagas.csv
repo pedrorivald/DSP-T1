@@ -1,4 +1,4 @@
 id,tipo,categoria,empresa,status,data_criacao,descricao
-01JEBPNQR9FMJZMMETXEJ4A9FF,presencial,mobile,Facebook,ativa,2024-12-05 12:23:03.817756,teste teste teste 1344
-01JEBPNRRDTK2BX7958PY2V58R,presencial,frontend,Facebook,inativa,2024-12-05 12:23:04.845018,teste teste teste 1344
-01JECZPRNSKVYQP4T177HK9QAT,hibrida,backend,Google,ativa,2024-12-06 00:20:09.145318,vaga de 10k
+01JEBPNQR9FMJZMMETXEJ4A9FF,presencial,frontend,Facebook,ativa,2024-12-05 12:23:03.817756,teste teste teste 1344
+01JECZPRNSKVYQP4T177HK9QAT,hibrida,fullstack,Google,ativa,2024-12-06 00:20:09.145318,vaga de 10k
+01JEFH38ME1NZE2BJ4K6F6ZBW4,remota,backend,teste,ativa,2024-12-07 00:02:33.358349,teste

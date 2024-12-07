@@ -1,4 +1,5 @@
 import csv
+import logging
 from ulid import ULID
 from typing import List, Type, TypeVar
 import zipfile
@@ -50,7 +51,18 @@ def to_zip(file_path: str, path_zip_file: str):
         return 0
     
 def generate_hash_sha256(file_path: str):
+    """Calcula o hash 256 do arquivo."""
     with open(file_path, 'rb') as f:
         file_data = f.read()
         sha256_hash = hashlib.sha256(file_data).hexdigest()
         return sha256_hash
+    
+def get_log_level(status_code):
+    """Retorna o nivel do log de acordo com o status da resposta."""
+    log_levels = {
+        2: logging.INFO,      # 2xx: Sucesso
+        3: logging.WARNING,   # 3xx: Redirecionamento
+        4: logging.ERROR,     # 4xx: Erro do cliente
+        5: logging.CRITICAL,  # 5xx: Erro do servidor
+    }
+    return log_levels.get(status_code // 100, logging.DEBUG)
